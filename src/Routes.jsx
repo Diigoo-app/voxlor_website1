@@ -35,10 +35,10 @@ const Routes = () => {
       path: "/thechain",
       element: <TheChainPage />,
     },
-    {
-      path: "/roadmap",
-      element: <RoadmapPage />,
-    },
+    // {
+    //   path: "/roadmap",
+    //   element: <RoadmapPage />,
+    // },
     {
       path:"/header",
       element: <Header />
