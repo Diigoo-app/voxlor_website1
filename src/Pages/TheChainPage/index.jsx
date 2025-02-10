@@ -11,7 +11,7 @@ const TheChainPage = () => (
     <div className="pb-20">
       <Header />
     </div>
-    <div className="mr-6 overflow-hidden  w-full flex flex-col justify-center items-center min-h-screen">
+    <div className="mr-6 overflow-hidden  w-full flex flex-col justify-center items-center min-h-screen mb-10 lg:mb-0">
       <ContentSection />
     </div>
   </div>

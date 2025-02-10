@@ -6,9 +6,9 @@ import Header from "../../Components/Header";
 import "./index.css";
 
 const FaqsPage = () => (
-  <div className="bg-container relative h-auto overflow-y-auto">
+  <div className="bg-container relative min-h-screen overflow-y-auto">
     <Header />
-    <div className="relative mt-28 px-4 md:px-44">
+    <div className="relative mt-28 mb-10 lg:mb-10">
       <ContentSection />
     </div>
   </div>
@@ -17,8 +17,8 @@ const FaqsPage = () => (
 
 
 const ContentSection = () => (
-  <div className="flex flex-col md:flex-row gap-4 md:gap-1 pt-8">
-    <div className="md:pl-44 flex flex-col gap-2 w-full md:w-auto">
+  <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-1 pt-8">
+    <div className=" flex flex-col justify-center items-center gap-2 w-full md:w-auto ">
       <Title text="FAQs" />
       <FaqList />
     </div>
@@ -27,9 +27,9 @@ const ContentSection = () => (
 );
 
 const Title = ({ text }) => (
-  <div className="customeskew6 relative w-full md:w-[357px] h-[150px] bg-black p-4">
-    <div className="relative bg-white customeskew-in6 pl-8 md:pl-16 flex items-center text-center h-full">
-      <span className="text-[40px] md:text-[68px] font-extrabold text-black stroke-text tracking-[-1px] md:tracking-[-4px]">
+  <div className="customeskew6 relative w-full md:w-[357px] h-[150px] bg-black p-4 ">
+    <div className="relative bg-white customeskew-in6 pl-8 md:pl-16 flex flex-row justify-center items-center text-center h-full">
+      <span className="text-[40px] md:text-[68px] font-extrabold text-black stroke-text tracking-[-1px] md:tracking-[-4px] ">
         {text}
       </span>
     </div>
@@ -90,7 +90,7 @@ const BuySection = () => {
   };
 
   return (
-    <div className="w-full max-w-[370px] sm:max-w-[450px] lg:max-w-[560px] lg:h-[400px] border border-black bg-white rounded-2xl shadow-lg flex flex-col items-center p-4 sm:p-6 lg:p-5 mx-auto">
+    <div className="w-full max-w-[370px] sm:max-w-[450px] lg:max-w-[560px] lg:h-[400px] border border-black bg-white rounded-2xl shadow-lg flex flex-col items-center p-4 sm:p-6 lg:p-5 lg:ml-4">
       <div className="innerdiv lg:mt-10 flex flex-col items-center justify-center space-y-3 sm:space-y-4 lg:space-y-2">
         <span className="font-bold text-lg sm:text-xl lg:text-2xl text-center text-black">
           Buy VOXTX, Presale going to start!

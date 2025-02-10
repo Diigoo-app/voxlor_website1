@@ -10,7 +10,7 @@ const Tokenomics = () => {
       <div className="pb-20">
         <Header />
       </div>
-      <div className="mr-6 w-full flex flex-col justify-center items-center">
+      <div className="mr-6 w-full flex flex-col justify-center items-center mb-10 lg:mb-0">
         <ContentSection />
       </div>
     </div>

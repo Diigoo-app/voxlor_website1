@@ -9,7 +9,7 @@ const HowtoBuy = () => {
   return (
     <div className="bg-container relative overflow-hidden  min-h-[80vh] sm:min-h-[100vh]">
       <Header />
-      <div className="z-10 relative pt-28">
+      <div className="mb-10 lg:mb-0 pt-28">
         <ContentSection />
       </div>
     </div>
