@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: "Inter", sans-serif;
+  }
+}
+
+@layer utilities {
+  .webkit-bg-clip-text {
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+}
+
+.stroke-text {
+  -webkit-text-stroke: 2px black;
+}
+
+.customeskew {
+  clip-path: polygon(2% 3%, 99% 3%, 93% 97%, 7% 97%);
+}
+
+.customeskew-in {
+  clip-path: polygon(1% 0%, 100% 0%, 94% 100%, 6% 100%);
+}
+
+.customeskew2 {
+  clip-path: polygon(2% 4%, 99% 5%, 93% 93%, 7% 96%);
+}
+
+.customeskew-in2 {
+  clip-path: polygon(1% 0%, 100% 0%, 94% 95%, 6% 100%);
+}
+
+.customeskew3 {
+  clip-path: polygon(18% 1%, 94% 6%, 99% 65%, 1% 86%);
+}
+
+.customeskew-in3 {
+  clip-path: polygon(17% 0%, 95% 6%, 100% 75%, 0% 100%);
+}
+
+.customeskew4 {
+  clip-path: polygon(0% 6%, 99% 6%, 93% 95%, 10% 79%);
+}
+
+.customeskew-in4 {
+  clip-path: polygon(0% 0%, 100% 0%, 94% 100%, 9% 82%);
+}
+
+.customeskew5 {
+  display: inline-block;
+  position: relative;
+  min-width: 150px;
+  min-height: 150px;
+  margin: 20px;
+  color: red;
+  filter: url(#round);
+  clip-path: polygon(0% 0%, 100% 0%, 88% 98%, 0% 98%, 2% 0%);
+  overflow: hidden;
+}
+
+.customeskew-in5 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 98%;
+  clip-path: inherit;
+  color: black;
+  overflow: hidden;
+  filter: url(#round);
+}
+
+.customeskew5::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #858484;
+  clip-path: inherit;
+}
+
+.customeskew-in5::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  background: black;
+  clip-path: inherit;
+}
+
+.customeskew6 {
+  clip-path: polygon(0% 18%, 100% 5%, 93% 95%, 10% 94%);
+}
+
+.customeskew-in6 {
+  clip-path: polygon(0% 18%, 100% 0%, 94% 100%, 9% 100%);
+}
+
+.customeskew7 {
+  clip-path: polygon(0% 4%, 100% 4%, 91% 92%, 10% 80%);
+}
+
+.customeskew-in7 {
+  clip-path: polygon(0% -2%, 100% 0%, 92% 96%, 9% 81%);
+}
+
+.customeskew8 {
+  clip-path: polygon(1% 2%, 100% 2%, 87% 85%, 13% 97%);
+}
+
+.customeskew-in8 {
+  clip-path: polygon(1% 0%, 100% 0%, 88% 86%, 12% 99%);
+}
+
+.customeskew9 {
+  clip-path: polygon(1% 21%, 100% 3%, 76% 86%, 13% 96%);
+}
+
+.customeskew-in9 {
+  clip-path: polygon(0% 20%, 100% 0%, 77% 87%, 12% 99%);
+}
