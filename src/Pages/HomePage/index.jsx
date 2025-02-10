@@ -53,7 +53,7 @@ const ContentSection = () => (
     <div className="lg:hidden flex flex-row justify-center items-center">
       <img
         className="h-[330px] w-[fit-content]"
-        src="/images/cartoon3.png"
+        src="/images/home_fox.png"
         alt="cartoon"
       />
     </div>
@@ -138,6 +138,7 @@ const BuySection = () => {
 
 
 const CountdownTimer = () => {
+  const targetDate = new Date("February 15, 2025 10:00:00").getTime();
   const [time, setTime] = useState({
     days: "00",
     hours: "00",
@@ -147,13 +148,20 @@ const CountdownTimer = () => {
 
   useEffect(() => {
     const updateTime = () => {
-      const now = new Date();
-      setTime({
-        days: String(now.getDate()).padStart(2, "0"),
-        hours: String(now.getHours()).padStart(2, "0"),
-        minutes: String(now.getMinutes()).padStart(2, "0"),
-        seconds: String(now.getSeconds()).padStart(2, "0"),
-      });
+      const now = new Date().getTime();
+      const difference = targetDate - now;
+
+      if (difference <= 0) {
+        clearInterval(interval);
+        return;
+      }
+
+      const days = String(Math.floor(difference / (1000 * 60 * 60 * 24))).padStart(2, "0");
+      const hours = String(Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, "0");
+      const minutes = String(Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, "0");
+      const seconds = String(Math.floor((difference % (1000 * 60)) / 1000)).padStart(2, "0");
+
+      setTime({ days, hours, minutes, seconds });
     };
 
     updateTime();

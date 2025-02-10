@@ -44,7 +44,9 @@ const Header = () => {
     <header className="flex justify-between items-center px-6 md:px-16 lg:px-40 py-4 w-full text-white absolute top-0 z-50">
       {/* Logo */}
       <div className="flex items-center">
-        <img src="images/LogoText.png" alt="logo" className="h-20 md:h-16 lg:h-24" />
+      <a href="/">
+      <img src="images/LogoText.png" alt="logo" className="h-20 md:h-16 lg:h-24" />
+    </a>
       </div>
 
       {/* Mobile Menu Button */}
