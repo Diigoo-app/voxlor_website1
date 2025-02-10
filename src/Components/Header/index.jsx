@@ -9,7 +9,7 @@ const Button = ({ className = "", children, ...props }) => (
   </button>
 );
 
-const NAV_ITEMS = ["Roadmap", "How to Buy", "Tokenomics", "FAQs"];
+const NAV_ITEMS = ["How to Buy", "Tokenomics", "FAQs"]; //removed Roadmap
 
 const BuyDialogBox = ({ onClose }) => (
   <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
@@ -38,7 +38,7 @@ const Header = () => {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
-  const isRoadmapPage = location.pathname === "/roadmap";
+  // const isRoadmapPage = location.pathname === "/roadmap";
 
   return (
     <header className="flex justify-between items-center px-6 md:px-16 lg:px-40 py-4 w-full text-white absolute top-0 z-50">
@@ -70,7 +70,7 @@ const Header = () => {
 
       {/* Action Buttons (Desktop) */}
       <div className="hidden md:flex items-center gap-6">
-        {!isRoadmapPage ? (
+        {/* {!isRoadmapPage ? ( */}
           <>
             <Button
               className="bg-gradient-to-r from-orange-500 via-orange-400 to-orange-300 text-white"
@@ -99,14 +99,14 @@ const Header = () => {
               </MenuItems>
             </Menu>
           </>
-        ) : (
+        {/* ) : (
           <>
             <Button className="text-white border-[1px] border-white">Sign In</Button>
             <Button className="bg-gradient-to-r from-orange-500 via-orange-400 to-orange-300 text-white">
               Sign Up
             </Button>
           </>
-        )}
+        )} */}
       </div>
 
       {/* Mobile Menu (Dropdown) */}
@@ -124,7 +124,7 @@ const Header = () => {
           </nav>
 
           <div className="flex flex-col gap-4 mt-6">
-            {!isRoadmapPage ? (
+            {/* {!isRoadmapPage ? ( */}
               <>
                 <Button
                   className="bg-gradient-to-r from-orange-500 via-orange-400 to-orange-300 text-white w-full"
@@ -153,14 +153,14 @@ const Header = () => {
                   </MenuItems>
                 </Menu>
               </>
-            ) : (
+            {/* ) : (
               <>
                 <Button className="text-white border-[1px] border-white w-full">Sign In</Button>
                 <Button className="bg-gradient-to-r from-orange-500 via-orange-400 to-orange-300 text-white w-full">
                   Sign Up
                 </Button>
               </>
-            )}
+            )} */}
           </div>
         </div>
       )}
