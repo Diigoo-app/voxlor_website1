@@ -49,7 +49,11 @@ const MultichainInfo = () => (
         {/* Dynamic Grid Layout for Better Responsiveness */}
         <div
           className={`grid gap-6 ${
-            phase.months.length === 2 ? "grid-cols-1 sm:grid-cols-2" : "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
+            phase.months.length === 1 
+              ? "grid-cols-1" 
+              : phase.months.length === 2 
+              ? "grid-cols-1 sm:grid-cols-2" 
+              : "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
           }`}
         >
           {phase.months.map((month, i) => (
@@ -60,6 +64,7 @@ const MultichainInfo = () => (
     ))}
   </div>
 );
+
 
 const InfoCard = ({ title, list }) => (
   <div className="flex flex-col gap-4 items-center justify-between w-full">
@@ -193,6 +198,21 @@ const roadmapData = [
           "Review of 2024 Goals & Achievements",
           "Announcing 2025 Roadmap & Future Developments",
           "Community Feedback & Feature Enhancements",
+        ],
+      },
+    ],
+  },
+  {
+    title: "Future Roadmap Announcement for 2025 🚀",
+    months: [
+      {
+        title: "🌎 The Future of VOXTX - 2025 & Beyond",
+        list: [
+          "AI-Powered Smart Contracts & Automation",
+          "Enterprise-Grade Blockchain Solutions for Global Adoption",
+          "Decentralized AI & Data Economy Powered by VOXTX",
+          "Mainstream Institutional Adoption of VOXTX as a Key Crypto Asset",
+          
         ],
       },
     ],
