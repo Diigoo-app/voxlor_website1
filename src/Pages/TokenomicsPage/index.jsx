@@ -27,14 +27,14 @@ const ContentSection = () => (
       <div className="h-max w-[fit-content] m-10 p-6">
         {/* For small screens, show pie.svg */}
         <img
-          src="/images/pie.svg"
+          src="/images/Group 269.png"
           alt="pie-chart"
           className="hidden lg:block"
         />
 
         {/* For medium and larger screens, show pieLarge.svg */}
         <img
-          src="/images/pieLarge.svg"
+          src="/images/Group 270.png"
           alt="pie-chart"
           className="block lg:hidden"
         />
