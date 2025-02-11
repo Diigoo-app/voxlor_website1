@@ -28,7 +28,7 @@ const HomePage = () => {
 
 const Headline = ({ text }) => (
   <div className="text-2xl md:text-5xl align-center pt-16 text-white w-[340px] h-[120px] md:w-[690px] relative mb-[1rem] ">
-    <span className="font-black text-center absolute lg-top-[-4px] lg-left-[-4px] transform rotate-[1deg] md:rotate-[-deg] text-justify">
+    <span className="relative z-10 font-black text-center absolute lg-top-[-4px] lg-left-[-4px] transform rotate-[1deg] md:rotate-[-deg] text-justify">
       {text}
     </span>
   </div>
@@ -39,8 +39,8 @@ const SubHeadline = () => {
   const repeatedText = Array(20).fill(text).join(" // ");
 
   return (
-    <div className="text-[1rem] text-s font-bold relative mt-6 w-screen">
-      <span className="absolute flex items-center transform rotate-[3deg] md:rotate-[-3deg] w-full h-[52px] bg-[#EEFF9A] overflow-hidden whitespace-nowrap text-clip">
+    <div className="text-[1rem] text-s font-bold relative mt-7 w-screen">
+      <span className="relative flex items-center transform rotate-[3deg] md:rotate-[2deg] w-full h-[52px] bg-[#EEFF9A] overflow-hidden whitespace-nowrap text-clip">
         {repeatedText}
       </span>
     </div>
